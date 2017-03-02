@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!--Created:ce44715c-8c4e-446b-879c-ea9ebe0f09c8-->
+<OfficeApp 
+          xmlns="http://schemas.microsoft.com/office/appforoffice/1.1" 
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+          xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0" 
+          xmlns:ov="http://schemas.microsoft.com/office/taskpaneappversionoverrides"
+          xsi:type="TaskPaneApp">
+
+  <!-- Начало основных настроек: метаданные надстройки, используемые для всех версий Office, если не предоставлено переопределение. -->
+
+  <!-- ВАЖНО! Идентификатор должен быть уникальным для надстройки. Если этот манифест используется многократно, измените идентификатор на новый GUID. -->
+  <Id>354eb70e-5ede-469d-9818-76bb0654c203</Id>
+
+  <!--Версия. Обновления из Магазина активируются, только если изменяется версия. -->
+  <Version>1.0.0.0</Version>
+  <ProviderName>[Имя поставщика]</ProviderName>
+  <DefaultLocale>en-US</DefaultLocale>
+  <!-- Отображаемое имя надстройки. Используется в Магазине и различных местах пользовательского интерфейса Office, например в диалоговом окне надстройки. -->
+  <DisplayName DefaultValue="Word Magick" />
+  <Description DefaultValue="Word Magick"/>
+
+  <!-- Значок надстройки. Используется на экранах установки и диалоговых окнах надстроек. -->
+  <IconUrl DefaultValue="~remoteAppUrl/Images/Button32x32.png" />
+
+  <!-- Домены, которые будут разрешены при навигации. Например, если использовать ShowTaskpane, а затем указать ссылку "href", навигация будет разрешена только для домена, находящегося в списке. -->
+  <AppDomains>
+    <AppDomain>AppDomain1</AppDomain>
+    <AppDomain>AppDomain2</AppDomain>
+    <AppDomain>AppDomain3</AppDomain>
+  </AppDomains>
+  <!--Конец основных настроек. -->
+  
+  <!--Начало интеграции для режима TaskPane. Этот раздел будет использован, если отсутствуют VersionOverride или если версия клиента Office не поддерживает команды надстройки. -->
+  <Hosts>
+    <Host Name="Document" />
+  </Hosts>
+  <DefaultSettings>
+    <SourceLocation DefaultValue="~remoteAppUrl/" />
+  </DefaultSettings>
+
+  <Permissions>ReadWriteDocument</Permissions>
+
+  <VersionOverrides xmlns="http://schemas.microsoft.com/office/taskpaneappversionoverrides" xsi:type="VersionOverridesV1_0">
+    <Hosts>
+      <Host xsi:type="Document">
+        <DesktopFormFactor>
+          <GetStarted>
+            <Title resid="WMagick.GetStarted.Title"/>
+            <Description resid="WMagick.GetStarted.Description"/>
+            <LearnMoreUrl resid="WMagick.GetStarted.LearnMoreUrl"/>
+          </GetStarted>
+
+          <FunctionFile resid="WMagick.DesktopFunctionFile.Url" />
+
+          <ExtensionPoint xsi:type="PrimaryCommandSurface">
+            <OfficeTab id="TabHome">
+              <Group id="WMagick.Group">
+                <Label resid="WMagick.GroupLabel" />
+                <!-- Отображается, когда невозможно уместить все элементы, открывает подокно -->
+                <Icon>
+                  <bt:Image size="16" resid="WMagick.Shuffle.icon_16x16" />
+                  <bt:Image size="32" resid="WMagick.Shuffle.icon_32x32" />
+                  <bt:Image size="80" resid="WMagick.Shuffle.icon_80x80" />
+                </Icon>
+
+                <Control xsi:type="Button" id="WMagick.Shuffle.Button">
+                  <Label resid="WMagick.Shuffle.Button.Label" />
+                  <Supertip>
+                    <Title resid="WMagick.Shuffle.Button.Label" />
+                    <Description resid="WMagick.Shuffle.Button.Tooltip" />
+                  </Supertip>
+                  <Icon>
+                    <bt:Image size="16" resid="WMagick.Shuffle.icon_16x16" />
+                    <bt:Image size="32" resid="WMagick.Shuffle.icon_32x32" />
+                    <bt:Image size="80" resid="WMagick.Shuffle.icon_80x80" />
+                  </Icon>
+                  <Action xsi:type="ExecuteFunction">
+                    <FunctionName>shuffle_chars</FunctionName>
+                  </Action>
+                </Control>
+              </Group>
+            </OfficeTab>
+          </ExtensionPoint>
+        </DesktopFormFactor>
+      </Host>
+    </Hosts>
+    
+    <!-- Ресурсы можно использовать в разных узлах и форм-факторах. -->
+    <Resources>
+      <bt:Images>
+        <bt:Image id="WMagick.Shuffle.icon_16x16" DefaultValue="~remoteAppUrl/Images/Button16x16.png" />
+        <bt:Image id="WMagick.Shuffle.icon_32x32" DefaultValue="~remoteAppUrl/Images/Button32x32.png" />
+        <bt:Image id="WMagick.Shuffle.icon_80x80" DefaultValue="~remoteAppUrl/Images/Button80x80.png" />
+      </bt:Images>
+      <bt:Urls>
+        <bt:Url id="WMagick.DesktopFunctionFile.Url" DefaultValue="~remoteAppUrl/Functions/FunctionFile.html" />
+        <bt:Url id="WMagick.GetStarted.LearnMoreUrl" DefaultValue="https://go.microsoft.com/fwlink/?LinkId=276812" />
+      </bt:Urls>
+      <bt:ShortStrings>
+        <bt:String id="WMagick.Shuffle.Button.Label" DefaultValue="Shuffle" />
+        <bt:String id="WMagick.GroupLabel" DefaultValue="Word Magick" />
+        <bt:String id="WMagick.GetStarted.Title" DefaultValue="Default title.">
+          <bt:Override Locale="ru-ru" Value="Заголовок на русском."/>
+        </bt:String>
+      </bt:ShortStrings>
+      <bt:LongStrings>
+        <bt:String id="WMagick.Shuffle.Button.Tooltip" DefaultValue="Click to shuffle chars in selected words" />
+        <bt:String id="WMagick.GetStarted.Description" DefaultValue="Eng description.">
+          <bt:Override Locale="ru-ru" Value="Описание дополнения на русском."/>
+        </bt:String>
+      </bt:LongStrings>
+    </Resources>
+  </VersionOverrides>
+  <!-- Конец интеграции для режима команд надстройки. -->
+
+</OfficeApp>
