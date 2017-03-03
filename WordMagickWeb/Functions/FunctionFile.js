@@ -71,9 +71,13 @@ function changeSelectedDataAsync(changer) {
     matrixHandler();
 }
 
+function word_replacer(changer, data) {
+    return data.toString().replace(/[\wа-яёА-ЯЁ]+/ig, changer);
+}
+
 function shuffle_chars() {
-    changeSelectedDataAsync(function (data) {
-        console.info("changer arg: " + data);
-        return data;
+    var shuffleChars = word_replacer.bind(null, function (m) {
+        return shuffle(m.split('')).join('');
     });
+    changeSelectedDataAsync(shuffleChars);
 }
