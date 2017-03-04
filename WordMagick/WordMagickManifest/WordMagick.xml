@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <!--Created:ce44715c-8c4e-446b-879c-ea9ebe0f09c8-->
-<OfficeApp 
-          xmlns="http://schemas.microsoft.com/office/appforoffice/1.1" 
-          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-          xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0" 
+<OfficeApp
+          xmlns="http://schemas.microsoft.com/office/appforoffice/1.1"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0"
           xmlns:ov="http://schemas.microsoft.com/office/taskpaneappversionoverrides"
           xsi:type="TaskPaneApp">
 
@@ -30,7 +30,7 @@
     <AppDomain>AppDomain3</AppDomain>
   </AppDomains>
   <!--Конец основных настроек. -->
-  
+
   <!--Начало интеграции для режима TaskPane. Этот раздел будет использован, если отсутствуют VersionOverride или если версия клиента Office не поддерживает команды надстройки. -->
   <Hosts>
     <Host Name="Document" />
@@ -59,25 +59,69 @@
                 <Label resid="WMagick.GroupLabel" />
                 <!-- Отображается, когда невозможно уместить все элементы, открывает подокно -->
                 <Icon>
-                  <bt:Image size="16" resid="WMagick.Shuffle.icon_16x16" />
-                  <bt:Image size="32" resid="WMagick.Shuffle.icon_32x32" />
-                  <bt:Image size="80" resid="WMagick.Shuffle.icon_80x80" />
+                  <bt:Image size="16" resid="WMagick.icon_16x16" />
+                  <bt:Image size="32" resid="WMagick.icon_32x32" />
+                  <bt:Image size="80" resid="WMagick.icon_80x80" />
                 </Icon>
 
-                <Control xsi:type="Button" id="WMagick.Shuffle.Button">
-                  <Label resid="WMagick.Shuffle.Button.Label" />
+                <Control xsi:type="Menu" id="WMagick.ShuffleMenu">
+                  <Label resid="WMagick.ShuffleMenu.Label" />
                   <Supertip>
-                    <Title resid="WMagick.Shuffle.Button.Label" />
-                    <Description resid="WMagick.Shuffle.Button.Tooltip" />
+                    <Title resid="WMagick.ShuffleMenu.Label" />
+                    <Description resid="WMagick.ShuffleMenu.Description" />
                   </Supertip>
                   <Icon>
-                    <bt:Image size="16" resid="WMagick.Shuffle.icon_16x16" />
-                    <bt:Image size="32" resid="WMagick.Shuffle.icon_32x32" />
-                    <bt:Image size="80" resid="WMagick.Shuffle.icon_80x80" />
+                    <bt:Image size="16" resid="WMagick.ShuffleMenu.icon_16x16" />
+                    <bt:Image size="32" resid="WMagick.ShuffleMenu.icon_32x32" />
+                    <bt:Image size="80" resid="WMagick.ShuffleMenu.icon_80x80" />
                   </Icon>
-                  <Action xsi:type="ExecuteFunction">
-                    <FunctionName>shuffle_all</FunctionName>
-                  </Action>
+                  <Items>
+                    <Item id ="ShuffleAll">
+                      <Label resid="WMagick.ShuffleAll.Label" />
+                      <Supertip>
+                        <Title resid="WMagick.ShuffleAll.Title" />
+                        <Description resid="WMagick.ShuffleAll.Description" />
+                      </Supertip>
+                      <Icon>
+                        <bt:Image size="16" resid="WMagick.ShuffleAll.icon_16x16" />
+                        <bt:Image size="32" resid="WMagick.ShuffleAll.icon_32x32" />
+                        <bt:Image size="80" resid="WMagick.ShuffleAll.icon_80x80" />
+                      </Icon>
+                      <Action xsi:type="ExecuteFunction">
+                        <FunctionName>shuffleAll</FunctionName>
+                      </Action>
+                    </Item>
+                    <Item id ="ShuffleTail">
+                      <Label resid="WMagick.ShuffleTail.Label" />
+                      <Supertip>
+                        <Title resid="WMagick.ShuffleTail.Title" />
+                        <Description resid="WMagick.ShuffleTail.Description" />
+                      </Supertip>
+                      <Icon>
+                        <bt:Image size="16" resid="WMagick.ShuffleTail.icon_16x16" />
+                        <bt:Image size="32" resid="WMagick.ShuffleTail.icon_32x32" />
+                        <bt:Image size="80" resid="WMagick.ShuffleTail.icon_80x80" />
+                      </Icon>
+                      <Action xsi:type="ExecuteFunction">
+                        <FunctionName>shuffleTail</FunctionName>
+                      </Action>
+                    </Item>
+                    <Item id ="ShuffleInner">
+                      <Label resid="WMagick.ShuffleInner.Label" />
+                      <Supertip>
+                        <Title resid="WMagick.ShuffleInner.Title" />
+                        <Description resid="WMagick.ShuffleInner.Description" />
+                      </Supertip>
+                      <Icon>
+                        <bt:Image size="16" resid="WMagick.ShuffleInner.icon_16x16" />
+                        <bt:Image size="32" resid="WMagick.ShuffleInner.icon_32x32" />
+                        <bt:Image size="80" resid="WMagick.ShuffleInner.icon_80x80" />
+                      </Icon>
+                      <Action xsi:type="ExecuteFunction">
+                        <FunctionName>shuffleInner</FunctionName>
+                      </Action>
+                    </Item>
+                  </Items>
                 </Control>
               </Group>
             </OfficeTab>
@@ -85,30 +129,57 @@
         </DesktopFormFactor>
       </Host>
     </Hosts>
-    
+
     <!-- Ресурсы можно использовать в разных узлах и форм-факторах. -->
     <Resources>
       <bt:Images>
-        <bt:Image id="WMagick.Shuffle.icon_16x16" DefaultValue="~remoteAppUrl/Images/Button16x16.png" />
-        <bt:Image id="WMagick.Shuffle.icon_32x32" DefaultValue="~remoteAppUrl/Images/Button32x32.png" />
-        <bt:Image id="WMagick.Shuffle.icon_80x80" DefaultValue="~remoteAppUrl/Images/Button80x80.png" />
+        <bt:Image id="WMagick.icon_16x16" DefaultValue="~remoteAppUrl/Images/Button16x16.png" />
+        <bt:Image id="WMagick.icon_32x32" DefaultValue="~remoteAppUrl/Images/Button32x32.png" />
+        <bt:Image id="WMagick.icon_80x80" DefaultValue="~remoteAppUrl/Images/Button80x80.png" />
+        <!--Shuffle-->
+        <bt:Image id="WMagick.ShuffleMenu.icon_16x16" DefaultValue="~remoteAppUrl/Images/Button16x16.png" />
+        <bt:Image id="WMagick.ShuffleMenu.icon_32x32" DefaultValue="~remoteAppUrl/Images/Button32x32.png" />
+        <bt:Image id="WMagick.ShuffleMenu.icon_80x80" DefaultValue="~remoteAppUrl/Images/Button80x80.png" />
+
+        <bt:Image id="WMagick.ShuffleAll.icon_16x16" DefaultValue="~remoteAppUrl/Images/Button16x16.png" />
+        <bt:Image id="WMagick.ShuffleAll.icon_32x32" DefaultValue="~remoteAppUrl/Images/Button32x32.png" />
+        <bt:Image id="WMagick.ShuffleAll.icon_80x80" DefaultValue="~remoteAppUrl/Images/Button80x80.png" />
+
+        <bt:Image id="WMagick.ShuffleTail.icon_16x16" DefaultValue="~remoteAppUrl/Images/Button16x16.png" />
+        <bt:Image id="WMagick.ShuffleTail.icon_32x32" DefaultValue="~remoteAppUrl/Images/Button32x32.png" />
+        <bt:Image id="WMagick.ShuffleTail.icon_80x80" DefaultValue="~remoteAppUrl/Images/Button80x80.png" />
+
+        <bt:Image id="WMagick.ShuffleInner.icon_16x16" DefaultValue="~remoteAppUrl/Images/Button16x16.png" />
+        <bt:Image id="WMagick.ShuffleInner.icon_32x32" DefaultValue="~remoteAppUrl/Images/Button32x32.png" />
+        <bt:Image id="WMagick.ShuffleInner.icon_80x80" DefaultValue="~remoteAppUrl/Images/Button80x80.png" />
       </bt:Images>
       <bt:Urls>
         <bt:Url id="WMagick.DesktopFunctionFile.Url" DefaultValue="~remoteAppUrl/Functions/FunctionFile.html" />
         <bt:Url id="WMagick.GetStarted.LearnMoreUrl" DefaultValue="https://go.microsoft.com/fwlink/?LinkId=276812" />
       </bt:Urls>
       <bt:ShortStrings>
-        <bt:String id="WMagick.Shuffle.Button.Label" DefaultValue="Shuffle" />
         <bt:String id="WMagick.GroupLabel" DefaultValue="Word Magick" />
         <bt:String id="WMagick.GetStarted.Title" DefaultValue="Default title.">
           <bt:Override Locale="ru-ru" Value="Заголовок на русском."/>
         </bt:String>
+        <bt:String id="WMagick.ShuffleMenu.Label" DefaultValue="Shuffle" />
+        <bt:String id="WMagick.ShuffleAll.Label" DefaultValue="all letters" />
+        <bt:String id="WMagick.ShuffleTail.Label" DefaultValue="tail letters" />
+        <bt:String id="WMagick.ShuffleInner.Label" DefaultValue="inner letters" />
+
+        <bt:String id="WMagick.ShuffleAll.Title" DefaultValue="Shuffle all letters" />
+        <bt:String id="WMagick.ShuffleTail.Title" DefaultValue="Shuffle tail letters" />
+        <bt:String id="WMagick.ShuffleInner.Title" DefaultValue="Shuffle inner letters" />
       </bt:ShortStrings>
       <bt:LongStrings>
-        <bt:String id="WMagick.Shuffle.Button.Tooltip" DefaultValue="Click to shuffle chars in selected words" />
         <bt:String id="WMagick.GetStarted.Description" DefaultValue="Eng description.">
           <bt:Override Locale="ru-ru" Value="Описание дополнения на русском."/>
         </bt:String>
+        <!--Shuffle-->
+        <bt:String id="WMagick.ShuffleMenu.Description" DefaultValue="Click to shuffle chars in selected words" />
+        <bt:String id="WMagick.ShuffleAll.Description" DefaultValue="This action shuffles all letters in each word." />
+        <bt:String id="WMagick.ShuffleTail.Description" DefaultValue="This action shuffles tail letters (all except first) in each word." />
+        <bt:String id="WMagick.ShuffleInner.Description" DefaultValue="This action shuffles inner letters (all except first and last) in each word." />
       </bt:LongStrings>
     </Resources>
   </VersionOverrides>

@@ -75,7 +75,7 @@ function replacer(regex, changer, data) {
     return data.toString().replace(regex, changer);
 }
 
-function shuffle_all() {
+function shuffleAll() {
     var shuffleChars = replacer.bind(null, new RegExp("[\\wа-яёА-ЯЁ]+", "ig"), function (match) {
         return shuffle(match.split('')).join('');
     });
@@ -91,7 +91,7 @@ function shuffleTail() {
 
 function shuffleInner() {
     var shuffleChars = replacer.bind(null, new RegExp("\\B[\\wа-яёА-ЯЁ]+\\B", "ig"), function (match) {
-        return shuffle(m.split('')).join('');
+        return shuffle(match.split('')).join('');
     });
     changeSelectedDataAsync(shuffleChars);
 }
