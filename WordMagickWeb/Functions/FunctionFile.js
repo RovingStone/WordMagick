@@ -71,12 +71,26 @@ function changeSelectedDataAsync(changer) {
     matrixHandler();
 }
 
-function word_replacer(changer, data) {
-    return data.toString().replace(/[\wа-яёА-ЯЁ]+/ig, changer);
+function replacer(regex, changer, data) {
+    return data.toString().replace(regex, changer);
 }
 
-function shuffle_chars() {
-    var shuffleChars = word_replacer.bind(null, function (m) {
+function shuffle_all() {
+    var shuffleChars = replacer.bind(null, new RegExp("[\\wа-яёА-ЯЁ]+", "ig"), function (match) {
+        return shuffle(match.split('')).join('');
+    });
+    changeSelectedDataAsync(shuffleChars);
+}
+
+function shuffleTail() {
+    var shuffleChars = replacer.bind(null, new RegExp("\\B[\\wа-яёА-ЯЁ]+", "ig"), function (match) {
+        return shuffle(match.split('')).join('');
+    });
+    changeSelectedDataAsync(shuffleChars);
+}
+
+function shuffleInner() {
+    var shuffleChars = replacer.bind(null, new RegExp("\\B[\\wа-яёА-ЯЁ]+\\B", "ig"), function (match) {
         return shuffle(m.split('')).join('');
     });
     changeSelectedDataAsync(shuffleChars);

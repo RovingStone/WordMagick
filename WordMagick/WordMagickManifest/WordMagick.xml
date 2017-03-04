@@ -76,7 +76,7 @@
                     <bt:Image size="80" resid="WMagick.Shuffle.icon_80x80" />
                   </Icon>
                   <Action xsi:type="ExecuteFunction">
-                    <FunctionName>shuffle_chars</FunctionName>
+                    <FunctionName>shuffle_all</FunctionName>
                   </Action>
                 </Control>
               </Group>
