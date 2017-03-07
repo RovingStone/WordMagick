@@ -76,22 +76,22 @@ function replacer(regex, changer, data) {
 }
 
 function shuffleAll() {
-    var shuffleChars = replacer.bind(null, new RegExp("[\\wа-яёА-ЯЁ]+", "ig"), function (match) {
+    var shuffler = replacer.bind(null, new RegExp("[\\wа-яёА-ЯЁ]+", "ig"), function (match) {
         return shuffle(match.split('')).join('');
     });
-    changeSelectedDataAsync(shuffleChars);
+    changeSelectedDataAsync(shuffler);
 }
 
 function shuffleTail() {
-    var shuffleChars = replacer.bind(null, new RegExp("\\B[\\wа-яёА-ЯЁ]+", "ig"), function (match) {
+    var tailShuffler = replacer.bind(null, new RegExp("\\B[\\wа-яёА-ЯЁ]+", "ig"), function (match) {
         return shuffle(match.split('')).join('');
     });
-    changeSelectedDataAsync(shuffleChars);
+    changeSelectedDataAsync(tailShuffler);
 }
 
 function shuffleInner() {
-    var shuffleChars = replacer.bind(null, new RegExp("\\B[\\wа-яёА-ЯЁ]+\\B", "ig"), function (match) {
+    var innerShuffler = replacer.bind(null, new RegExp("\\B[\\wа-яёА-ЯЁ]+\\B", "ig"), function (match) {
         return shuffle(match.split('')).join('');
     });
-    changeSelectedDataAsync(shuffleChars);
+    changeSelectedDataAsync(innerShuffler);
 }
