@@ -63,7 +63,23 @@
                   <bt:Image size="32" resid="WMagick.icon_32x32" />
                   <bt:Image size="80" resid="WMagick.icon_80x80" />
                 </Icon>
-
+                <!--Test-->
+                <Control xsi:type="Button" id="WMagick.TestButton">
+                  <Label resid="WMagick.Test.Label" />
+                  <Supertip>
+                    <Title resid="WMagick.Test.Title"/>
+                    <Description resid="WMagick.Test.Description"/>
+                  </Supertip>
+                  <Icon>
+                    <bt:Image size="16" resid="WMagick.icon_16x16" />
+                    <bt:Image size="32" resid="WMagick.icon_32x32" />
+                    <bt:Image size="80" resid="WMagick.icon_80x80" />
+                  </Icon>
+                  <Action xsi:type="ExecuteFunction">
+                    <FunctionName>test</FunctionName>
+                  </Action>
+                </Control>
+                <!--Shuffle-->
                 <Control xsi:type="Menu" id="WMagick.ShuffleMenu">
                   <Label resid="WMagick.ShuffleMenu.Label" />
                   <Supertip>
@@ -159,22 +175,26 @@
       </bt:Urls>
       <bt:ShortStrings>
         <bt:String id="WMagick.GroupLabel" DefaultValue="Word Magick" />
-        <bt:String id="WMagick.GetStarted.Title" DefaultValue="Default title.">
-          <bt:Override Locale="ru-ru" Value="Заголовок на русском."/>
-        </bt:String>
+        <bt:String id="WMagick.GetStarted.Title" DefaultValue="Default title."/>
+        <!--Test-->
+        <bt:String id="WMagick.Test.Label" DefaultValue="Test" />
+        <!--Shuffle-->
         <bt:String id="WMagick.ShuffleMenu.Label" DefaultValue="Shuffle" />
         <bt:String id="WMagick.ShuffleAll.Label" DefaultValue="all letters" />
         <bt:String id="WMagick.ShuffleTail.Label" DefaultValue="tail letters" />
         <bt:String id="WMagick.ShuffleInner.Label" DefaultValue="inner letters" />
 
+        <!--Test-->
+        <bt:String id="WMagick.Test.Title" DefaultValue="Test" />
+        <!--Shuffle-->
         <bt:String id="WMagick.ShuffleAll.Title" DefaultValue="Shuffle all letters" />
         <bt:String id="WMagick.ShuffleTail.Title" DefaultValue="Shuffle tail letters" />
         <bt:String id="WMagick.ShuffleInner.Title" DefaultValue="Shuffle inner letters" />
       </bt:ShortStrings>
       <bt:LongStrings>
-        <bt:String id="WMagick.GetStarted.Description" DefaultValue="Eng description.">
-          <bt:Override Locale="ru-ru" Value="Описание дополнения на русском."/>
-        </bt:String>
+        <bt:String id="WMagick.GetStarted.Description" DefaultValue="Eng description."/>
+        <!--Test-->
+        <bt:String id="WMagick.Test.Description" DefaultValue="Click to execute test function" />
         <!--Shuffle-->
         <bt:String id="WMagick.ShuffleMenu.Description" DefaultValue="Click to shuffle chars in selected words" />
         <bt:String id="WMagick.ShuffleAll.Description" DefaultValue="This action shuffles all letters in each word." />
@@ -184,5 +204,4 @@
     </Resources>
   </VersionOverrides>
   <!-- Конец интеграции для режима команд надстройки. -->
-
 </OfficeApp>

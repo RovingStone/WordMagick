@@ -95,3 +95,7 @@ function shuffleInner() {
     });
     changeSelectedDataAsync(innerShuffler);
 }
+
+function test() {
+    console.log("Test stub called");
+}
