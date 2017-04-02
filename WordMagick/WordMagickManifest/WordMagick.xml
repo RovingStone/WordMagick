@@ -235,48 +235,106 @@
       </bt:Urls>
       <bt:ShortStrings>
         <bt:String id="WMagick.GroupLabel" DefaultValue="Word Magick" />
-        <bt:String id="WMagick.GetStarted.Title" DefaultValue="Word Magick"/>
+        <bt:String id="WMagick.GetStarted.Title" DefaultValue="Word Magick" />
         <!--Skeleton-->
-        <bt:String id="WMagick.Skeleton.Label" DefaultValue="Skeleton" />
+        <bt:String id="WMagick.Skeleton.Label" DefaultValue="Skeleton">
+          <bt:Override Locale="ru-ru" Value="Скелетон" />
+        </bt:String>
         <!--Gaps-->
-        <bt:String id="WMagick.GapsMenu.Label" DefaultValue="Gaps" />
-        <bt:String id="WMagick.GapsEven.Label" DefaultValue="even" />
-        <bt:String id="WMagick.GapsVowels.Label" DefaultValue="vowels" />
-        <bt:String id="WMagick.GapsCons.Label" DefaultValue="consonants" />
-        <bt:String id="WMagick.GapsRandom.Label" DefaultValue="random" />
+        <bt:String id="WMagick.GapsMenu.Label" DefaultValue="Gaps">
+          <bt:Override Locale="ru-ru" Value="Пропуски" />
+        </bt:String>
+        <bt:String id="WMagick.GapsEven.Label" DefaultValue="even">
+          <bt:Override Locale="ru-ru" Value="чётные" />
+        </bt:String>
+        <bt:String id="WMagick.GapsVowels.Label" DefaultValue="vowels">
+          <bt:Override Locale="ru-ru" Value="гласные" />
+        </bt:String>
+        <bt:String id="WMagick.GapsCons.Label" DefaultValue="consonants">
+          <bt:Override Locale="ru-ru" Value="согласные" />
+        </bt:String>
+        <bt:String id="WMagick.GapsRandom.Label" DefaultValue="random">
+          <bt:Override Locale="ru-ru" Value="случайные" />
+        </bt:String>
         <!--Shuffle-->
-        <bt:String id="WMagick.ShuffleMenu.Label" DefaultValue="Shuffle" />
-        <bt:String id="WMagick.ShuffleAll.Label" DefaultValue="all" />
-        <bt:String id="WMagick.ShuffleTail.Label" DefaultValue="tail" />
-        <bt:String id="WMagick.ShuffleInner.Label" DefaultValue="inner" />
+        <bt:String id="WMagick.ShuffleMenu.Label" DefaultValue="Shuffle">
+          <bt:Override Locale="ru-ru" Value="Перемешать" />
+        </bt:String>
+        <bt:String id="WMagick.ShuffleAll.Label" DefaultValue="all">
+          <bt:Override Locale="ru-ru" Value="все" />
+        </bt:String>
+        <bt:String id="WMagick.ShuffleTail.Label" DefaultValue="tail">
+          <bt:Override Locale="ru-ru" Value="кроме первой" />
+        </bt:String>
+        <bt:String id="WMagick.ShuffleInner.Label" DefaultValue="inner">
+          <bt:Override Locale="ru-ru" Value="внутренние" />
+        </bt:String>
 
         <!--Skeleton-->
-        <bt:String id="WMagick.Skeleton.Title" DefaultValue="Skeleton" />
+        <bt:String id="WMagick.Skeleton.Title" DefaultValue="Skeleton">
+          <bt:Override Locale="ru-ru" Value="Скелетон" />
+        </bt:String>
         <!--Gaps-->
-        <bt:String id="WMagick.GapsEven.Title" DefaultValue="Gaps - even" />
-        <bt:String id="WMagick.GapsVowels.Title" DefaultValue="Gaps - vowels" />
-        <bt:String id="WMagick.GapsCons.Title" DefaultValue="Gaps - consonants" />
-        <bt:String id="WMagick.GapsRandom.Title" DefaultValue="Gaps - random" />
+        <bt:String id="WMagick.GapsEven.Title" DefaultValue="Gaps - even">
+          <bt:Override Locale="ru-ru" Value="Пропуски - чётные" />
+        </bt:String>
+        <bt:String id="WMagick.GapsVowels.Title" DefaultValue="Gaps - vowels">
+          <bt:Override Locale="ru-ru" Value="Пропуски - гласные" />
+        </bt:String>
+        <bt:String id="WMagick.GapsCons.Title" DefaultValue="Gaps - consonants">
+          <bt:Override Locale="ru-ru" Value="Пропуски - согласные" />
+        </bt:String>
+        <bt:String id="WMagick.GapsRandom.Title" DefaultValue="Gaps - random">
+          <bt:Override Locale="ru-ru" Value="Пропуски - случайные" />
+        </bt:String>
         <!--Shuffle-->
-        <bt:String id="WMagick.ShuffleAll.Title" DefaultValue="Shuffle all letters" />
-        <bt:String id="WMagick.ShuffleTail.Title" DefaultValue="Shuffle tail letters" />
-        <bt:String id="WMagick.ShuffleInner.Title" DefaultValue="Shuffle inner letters" />
+        <bt:String id="WMagick.ShuffleAll.Title" DefaultValue="Shuffle all letters">
+          <bt:Override Locale="ru-ru" Value="Перемешать все буквы" />
+        </bt:String>
+        <bt:String id="WMagick.ShuffleTail.Title" DefaultValue="Shuffle tail letters">
+          <bt:Override Locale="ru-ru" Value="Перемешать буквы, кроме первой" />
+        </bt:String>
+        <bt:String id="WMagick.ShuffleInner.Title" DefaultValue="Shuffle inner letters">
+          <bt:Override Locale="ru-ru" Value="Перемешать внутренние буквы" />
+        </bt:String>
       </bt:ShortStrings>
       <bt:LongStrings>
-        <bt:String id="WMagick.GetStarted.Description" DefaultValue="A simple tool which helps you to create exercises for English lessons"/>
+        <bt:String id="WMagick.GetStarted.Description" DefaultValue="A simple tool which helps you to create exercises for English lessons">
+          <bt:Override Locale="ru-ru" Value="Простая надстройка, которая поможет вам создавать упражнения для уроков английского языка" />
+        </bt:String>
         <!--Skeleton-->
-        <bt:String id="WMagick.Skeleton.Description" DefaultValue="Click to replace all letters except the first with a '...'" />
+        <bt:String id="WMagick.Skeleton.Description" DefaultValue="Click to replace all letters except the first with a '...'">
+          <bt:Override Locale="ru-ru" Value="Нажмите, чтобы заменить все буквы в слове '...', не изменяя первой" />
+        </bt:String>
         <!--Gaps-->
-        <bt:String id="WMagick.GapsMenu.Description" DefaultValue="Click to select action for gaps insertion" />
-        <bt:String id="WMagick.GapsEven.Description" DefaultValue="This action inserts gaps instead of even letters" />
-        <bt:String id="WMagick.GapsVowels.Description" DefaultValue="This action inserts gaps instead of vowels. It preservs the first letter" />
-        <bt:String id="WMagick.GapsCons.Description" DefaultValue="This action inserts gaps instead of consonants. It preservs the first letter" />
-        <bt:String id="WMagick.GapsRandom.Description" DefaultValue="This action inserts random gaps. It preservs the first letter" />
+        <bt:String id="WMagick.GapsMenu.Description" DefaultValue="Click to select action for gaps insertion">
+          <bt:Override Locale="ru-ru" Value="Нажмите, чтобы выбрать действие по расстановке пропусков" />
+        </bt:String>
+        <bt:String id="WMagick.GapsEven.Description" DefaultValue="This action inserts gaps instead of even letters">
+          <bt:Override Locale="ru-ru" Value="Это действие расставляет пропуски на месте каждой чётной буквы" />
+        </bt:String>
+        <bt:String id="WMagick.GapsVowels.Description" DefaultValue="This action inserts gaps instead of vowels. It preservs the first letter">
+          <bt:Override Locale="ru-ru" Value="Это действие расставляет пропуски после первой буквы в слове на месте каждого гласного" />
+        </bt:String>
+        <bt:String id="WMagick.GapsCons.Description" DefaultValue="This action inserts gaps instead of consonants. It preservs the first letter">
+          <bt:Override Locale="ru-ru" Value="Это действие расставляет пропуски после первой буквы в слове на месте каждого согласного" />
+        </bt:String>
+        <bt:String id="WMagick.GapsRandom.Description" DefaultValue="This action inserts random gaps. It preservs the first letter">
+          <bt:Override Locale="ru-ru" Value="Это действие расставляет случайные пропуски после первой буквы в слове" />
+        </bt:String>
         <!--Shuffle-->
-        <bt:String id="WMagick.ShuffleMenu.Description" DefaultValue="Click to select a shuffle action" />
-        <bt:String id="WMagick.ShuffleAll.Description" DefaultValue="This action shuffles all letters in each word" />
-        <bt:String id="WMagick.ShuffleTail.Description" DefaultValue="This action shuffles tail letters (all except the first) in each word" />
-        <bt:String id="WMagick.ShuffleInner.Description" DefaultValue="This action shuffles inner letters (all except the first and the last) in each word" />
+        <bt:String id="WMagick.ShuffleMenu.Description" DefaultValue="Click to select a shuffle action">
+          <bt:Override Locale="ru-ru" Value="Нажмите, чтобы выбрать действие для перемешивания букв" />
+        </bt:String>
+        <bt:String id="WMagick.ShuffleAll.Description" DefaultValue="This action shuffles all letters in each word">
+          <bt:Override Locale="ru-ru" Value="Это действие перемешивает все буквы в каждом слове" />
+        </bt:String>
+        <bt:String id="WMagick.ShuffleTail.Description" DefaultValue="This action shuffles tail letters (all except the first) in each word">
+          <bt:Override Locale="ru-ru" Value="Это действие перемешивает все буквы в каждом слове, кроме первой" />
+        </bt:String>
+        <bt:String id="WMagick.ShuffleInner.Description" DefaultValue="This action shuffles inner letters (all except the first and the last) in each word">
+          <bt:Override Locale="ru-ru" Value="Это действие перемешивает все буквы в каждом слове, кроме первой и последней" />
+        </bt:String>
       </bt:LongStrings>
     </Resources>
   </VersionOverrides>
