@@ -1,5 +1,4 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<!--Created:ce44715c-8c4e-446b-879c-ea9ebe0f09c8-->
 <OfficeApp
           xmlns="http://schemas.microsoft.com/office/appforoffice/1.1"
           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -7,31 +6,19 @@
           xmlns:ov="http://schemas.microsoft.com/office/taskpaneappversionoverrides"
           xsi:type="TaskPaneApp">
 
-  <!-- Начало основных настроек: метаданные надстройки, используемые для всех версий Office, если не предоставлено переопределение. -->
-
-  <!-- ВАЖНО! Идентификатор должен быть уникальным для надстройки. Если этот манифест используется многократно, измените идентификатор на новый GUID. -->
   <Id>354eb70e-5ede-469d-9818-76bb0654c203</Id>
-
-  <!--Версия. Обновления из Магазина активируются, только если изменяется версия. -->
   <Version>1.0.0.0</Version>
   <ProviderName>[Имя поставщика]</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
-  <!-- Отображаемое имя надстройки. Используется в Магазине и различных местах пользовательского интерфейса Office, например в диалоговом окне надстройки. -->
   <DisplayName DefaultValue="Word Magick" />
   <Description DefaultValue="Word Magick"/>
-
-  <!-- Значок надстройки. Используется на экранах установки и диалоговых окнах надстроек. -->
   <IconUrl DefaultValue="~remoteAppUrl/Images/Button32x32.png" />
 
-  <!-- Домены, которые будут разрешены при навигации. Например, если использовать ShowTaskpane, а затем указать ссылку "href", навигация будет разрешена только для домена, находящегося в списке. -->
   <AppDomains>
     <AppDomain>AppDomain1</AppDomain>
     <AppDomain>AppDomain2</AppDomain>
     <AppDomain>AppDomain3</AppDomain>
   </AppDomains>
-  <!--Конец основных настроек. -->
-
-  <!--Начало интеграции для режима TaskPane. Этот раздел будет использован, если отсутствуют VersionOverride или если версия клиента Office не поддерживает команды надстройки. -->
   <Hosts>
     <Host Name="Document" />
   </Hosts>
@@ -57,29 +44,12 @@
             <OfficeTab id="TabHome">
               <Group id="WMagick.Group">
                 <Label resid="WMagick.GroupLabel" />
-                <!-- Отображается, когда невозможно уместить все элементы, открывает подокно -->
                 <Icon>
                   <bt:Image size="16" resid="WMagick.icon_16x16" />
                   <bt:Image size="32" resid="WMagick.icon_32x32" />
                   <bt:Image size="80" resid="WMagick.icon_80x80" />
                 </Icon>
-                <!--Test-->
-                <Control xsi:type="Button" id="WMagick.TestButton">
-                  <Label resid="WMagick.Test.Label" />
-                  <Supertip>
-                    <Title resid="WMagick.Test.Title"/>
-                    <Description resid="WMagick.Test.Description"/>
-                  </Supertip>
-                  <Icon>
-                    <bt:Image size="16" resid="WMagick.icon_16x16" />
-                    <bt:Image size="32" resid="WMagick.icon_32x32" />
-                    <bt:Image size="80" resid="WMagick.icon_80x80" />
-                  </Icon>
-                  <Action xsi:type="ExecuteFunction">
-                    <FunctionName>test</FunctionName>
-                  </Action>
-                </Control>
-                <!--Skeletons-->
+                <!--Skeleton-->
                 <Control xsi:type="Button" id="WMagick.SkeletonButton">
                   <Label resid="WMagick.Skeleton.Label" />
                   <Supertip>
@@ -87,9 +57,9 @@
                     <Description resid="WMagick.Skeleton.Description"/>
                   </Supertip>
                   <Icon>
-                    <bt:Image size="16" resid="WMagick.icon_16x16" />
-                    <bt:Image size="32" resid="WMagick.icon_32x32" />
-                    <bt:Image size="80" resid="WMagick.icon_80x80" />
+                    <bt:Image size="16" resid="WMagick.Skeleton.icon_16x16" />
+                    <bt:Image size="32" resid="WMagick.Skeleton.icon_32x32" />
+                    <bt:Image size="80" resid="WMagick.Skeleton.icon_80x80" />
                   </Icon>
                   <Action xsi:type="ExecuteFunction">
                     <FunctionName>makeSkeleton</FunctionName>
@@ -115,9 +85,9 @@
                         <Description resid="WMagick.GapsEven.Description" />
                       </Supertip>
                       <Icon>
-                        <bt:Image size="16" resid="WMagick.GapsEven.icon_16x16" />
-                        <bt:Image size="32" resid="WMagick.GapsEven.icon_32x32" />
-                        <bt:Image size="80" resid="WMagick.GapsEven.icon_80x80" />
+                        <bt:Image size="16" resid="WMagick.Action.icon_16x16" />
+                        <bt:Image size="32" resid="WMagick.Action.icon_32x32" />
+                        <bt:Image size="80" resid="WMagick.Action.icon_80x80" />
                       </Icon>
                       <Action xsi:type="ExecuteFunction">
                         <FunctionName>makeEvenGaps</FunctionName>
@@ -130,9 +100,9 @@
                         <Description resid="WMagick.GapsVowels.Description" />
                       </Supertip>
                       <Icon>
-                        <bt:Image size="16" resid="WMagick.GapsVowels.icon_16x16" />
-                        <bt:Image size="32" resid="WMagick.GapsVowels.icon_32x32" />
-                        <bt:Image size="80" resid="WMagick.GapsVowels.icon_80x80" />
+                        <bt:Image size="16" resid="WMagick.Action.icon_16x16" />
+                        <bt:Image size="32" resid="WMagick.Action.icon_32x32" />
+                        <bt:Image size="80" resid="WMagick.Action.icon_80x80" />
                       </Icon>
                       <Action xsi:type="ExecuteFunction">
                         <FunctionName>makeVowelsGaps</FunctionName>
@@ -145,9 +115,9 @@
                         <Description resid="WMagick.GapsCons.Description" />
                       </Supertip>
                       <Icon>
-                        <bt:Image size="16" resid="WMagick.GapsCons.icon_16x16" />
-                        <bt:Image size="32" resid="WMagick.GapsCons.icon_32x32" />
-                        <bt:Image size="80" resid="WMagick.GapsCons.icon_80x80" />
+                        <bt:Image size="16" resid="WMagick.Action.icon_16x16" />
+                        <bt:Image size="32" resid="WMagick.Action.icon_32x32" />
+                        <bt:Image size="80" resid="WMagick.Action.icon_80x80" />
                       </Icon>
                       <Action xsi:type="ExecuteFunction">
                         <FunctionName>makeConsonantsGaps</FunctionName>
@@ -160,9 +130,9 @@
                         <Description resid="WMagick.GapsRandom.Description" />
                       </Supertip>
                       <Icon>
-                        <bt:Image size="16" resid="WMagick.GapsRandom.icon_16x16" />
-                        <bt:Image size="32" resid="WMagick.GapsRandom.icon_32x32" />
-                        <bt:Image size="80" resid="WMagick.GapsRandom.icon_80x80" />
+                        <bt:Image size="16" resid="WMagick.Action.icon_16x16" />
+                        <bt:Image size="32" resid="WMagick.Action.icon_32x32" />
+                        <bt:Image size="80" resid="WMagick.Action.icon_80x80" />
                       </Icon>
                       <Action xsi:type="ExecuteFunction">
                         <FunctionName>makeRandomGaps</FunctionName>
@@ -190,9 +160,9 @@
                         <Description resid="WMagick.ShuffleAll.Description" />
                       </Supertip>
                       <Icon>
-                        <bt:Image size="16" resid="WMagick.ShuffleAll.icon_16x16" />
-                        <bt:Image size="32" resid="WMagick.ShuffleAll.icon_32x32" />
-                        <bt:Image size="80" resid="WMagick.ShuffleAll.icon_80x80" />
+                        <bt:Image size="16" resid="WMagick.Action.icon_16x16" />
+                        <bt:Image size="32" resid="WMagick.Action.icon_32x32" />
+                        <bt:Image size="80" resid="WMagick.Action.icon_80x80" />
                       </Icon>
                       <Action xsi:type="ExecuteFunction">
                         <FunctionName>shuffleAll</FunctionName>
@@ -205,9 +175,9 @@
                         <Description resid="WMagick.ShuffleTail.Description" />
                       </Supertip>
                       <Icon>
-                        <bt:Image size="16" resid="WMagick.ShuffleTail.icon_16x16" />
-                        <bt:Image size="32" resid="WMagick.ShuffleTail.icon_32x32" />
-                        <bt:Image size="80" resid="WMagick.ShuffleTail.icon_80x80" />
+                        <bt:Image size="16" resid="WMagick.Action.icon_16x16" />
+                        <bt:Image size="32" resid="WMagick.Action.icon_32x32" />
+                        <bt:Image size="80" resid="WMagick.Action.icon_80x80" />
                       </Icon>
                       <Action xsi:type="ExecuteFunction">
                         <FunctionName>shuffleTail</FunctionName>
@@ -220,9 +190,9 @@
                         <Description resid="WMagick.ShuffleInner.Description" />
                       </Supertip>
                       <Icon>
-                        <bt:Image size="16" resid="WMagick.ShuffleInner.icon_16x16" />
-                        <bt:Image size="32" resid="WMagick.ShuffleInner.icon_32x32" />
-                        <bt:Image size="80" resid="WMagick.ShuffleInner.icon_80x80" />
+                        <bt:Image size="16" resid="WMagick.Action.icon_16x16" />
+                        <bt:Image size="32" resid="WMagick.Action.icon_32x32" />
+                        <bt:Image size="80" resid="WMagick.Action.icon_80x80" />
                       </Icon>
                       <Action xsi:type="ExecuteFunction">
                         <FunctionName>shuffleInner</FunctionName>
@@ -237,50 +207,27 @@
       </Host>
     </Hosts>
 
-    <!-- Ресурсы можно использовать в разных узлах и форм-факторах. -->
     <Resources>
       <bt:Images>
         <bt:Image id="WMagick.icon_16x16" DefaultValue="~remoteAppUrl/Images/Button16x16.png" />
         <bt:Image id="WMagick.icon_32x32" DefaultValue="~remoteAppUrl/Images/Button32x32.png" />
         <bt:Image id="WMagick.icon_80x80" DefaultValue="~remoteAppUrl/Images/Button80x80.png" />
-
+        <!--Action-->
+        <bt:Image id="WMagick.Action.icon_16x16" DefaultValue="~remoteAppUrl/Images/Services_16.png" />
+        <bt:Image id="WMagick.Action.icon_32x32" DefaultValue="~remoteAppUrl/Images/Services_32.png" />
+        <bt:Image id="WMagick.Action.icon_80x80" DefaultValue="~remoteAppUrl/Images/Services_80.png" />
         <!--Gaps-->
-        <bt:Image id="WMagick.GapsMenu.icon_16x16" DefaultValue="~remoteAppUrl/Images/Button16x16.png" />
-        <bt:Image id="WMagick.GapsMenu.icon_32x32" DefaultValue="~remoteAppUrl/Images/Button32x32.png" />
-        <bt:Image id="WMagick.GapsMenu.icon_80x80" DefaultValue="~remoteAppUrl/Images/Button80x80.png" />
-
-        <bt:Image id="WMagick.GapsEven.icon_16x16" DefaultValue="~remoteAppUrl/Images/Button16x16.png" />
-        <bt:Image id="WMagick.GapsEven.icon_32x32" DefaultValue="~remoteAppUrl/Images/Button32x32.png" />
-        <bt:Image id="WMagick.GapsEven.icon_80x80" DefaultValue="~remoteAppUrl/Images/Button80x80.png" />
-
-        <bt:Image id="WMagick.GapsVowels.icon_16x16" DefaultValue="~remoteAppUrl/Images/Button16x16.png" />
-        <bt:Image id="WMagick.GapsVowels.icon_32x32" DefaultValue="~remoteAppUrl/Images/Button32x32.png" />
-        <bt:Image id="WMagick.GapsVowels.icon_80x80" DefaultValue="~remoteAppUrl/Images/Button80x80.png" />
-
-        <bt:Image id="WMagick.GapsCons.icon_16x16" DefaultValue="~remoteAppUrl/Images/Button16x16.png" />
-        <bt:Image id="WMagick.GapsCons.icon_32x32" DefaultValue="~remoteAppUrl/Images/Button32x32.png" />
-        <bt:Image id="WMagick.GapsCons.icon_80x80" DefaultValue="~remoteAppUrl/Images/Button80x80.png" />
-
-        <bt:Image id="WMagick.GapsRandom.icon_16x16" DefaultValue="~remoteAppUrl/Images/Button16x16.png" />
-        <bt:Image id="WMagick.GapsRandom.icon_32x32" DefaultValue="~remoteAppUrl/Images/Button32x32.png" />
-        <bt:Image id="WMagick.GapsRandom.icon_80x80" DefaultValue="~remoteAppUrl/Images/Button80x80.png" />
-
+        <bt:Image id="WMagick.Skeleton.icon_16x16" DefaultValue="~remoteAppUrl/Images/Thriller_16.png" />
+        <bt:Image id="WMagick.Skeleton.icon_32x32" DefaultValue="~remoteAppUrl/Images/Thriller_32.png" />
+        <bt:Image id="WMagick.Skeleton.icon_80x80" DefaultValue="~remoteAppUrl/Images/Thriller_80.png" />
+        <!--Gaps-->
+        <bt:Image id="WMagick.GapsMenu.icon_16x16" DefaultValue="~remoteAppUrl/Images/Eraser_16.png" />
+        <bt:Image id="WMagick.GapsMenu.icon_32x32" DefaultValue="~remoteAppUrl/Images/Eraser_32.png" />
+        <bt:Image id="WMagick.GapsMenu.icon_80x80" DefaultValue="~remoteAppUrl/Images/Eraser_80.png" />
         <!--Shuffle-->
-        <bt:Image id="WMagick.ShuffleMenu.icon_16x16" DefaultValue="~remoteAppUrl/Images/Button16x16.png" />
-        <bt:Image id="WMagick.ShuffleMenu.icon_32x32" DefaultValue="~remoteAppUrl/Images/Button32x32.png" />
-        <bt:Image id="WMagick.ShuffleMenu.icon_80x80" DefaultValue="~remoteAppUrl/Images/Button80x80.png" />
-
-        <bt:Image id="WMagick.ShuffleAll.icon_16x16" DefaultValue="~remoteAppUrl/Images/Button16x16.png" />
-        <bt:Image id="WMagick.ShuffleAll.icon_32x32" DefaultValue="~remoteAppUrl/Images/Button32x32.png" />
-        <bt:Image id="WMagick.ShuffleAll.icon_80x80" DefaultValue="~remoteAppUrl/Images/Button80x80.png" />
-
-        <bt:Image id="WMagick.ShuffleTail.icon_16x16" DefaultValue="~remoteAppUrl/Images/Button16x16.png" />
-        <bt:Image id="WMagick.ShuffleTail.icon_32x32" DefaultValue="~remoteAppUrl/Images/Button32x32.png" />
-        <bt:Image id="WMagick.ShuffleTail.icon_80x80" DefaultValue="~remoteAppUrl/Images/Button80x80.png" />
-
-        <bt:Image id="WMagick.ShuffleInner.icon_16x16" DefaultValue="~remoteAppUrl/Images/Button16x16.png" />
-        <bt:Image id="WMagick.ShuffleInner.icon_32x32" DefaultValue="~remoteAppUrl/Images/Button32x32.png" />
-        <bt:Image id="WMagick.ShuffleInner.icon_80x80" DefaultValue="~remoteAppUrl/Images/Button80x80.png" />
+        <bt:Image id="WMagick.ShuffleMenu.icon_16x16" DefaultValue="~remoteAppUrl/Images/Dice_16.png" />
+        <bt:Image id="WMagick.ShuffleMenu.icon_32x32" DefaultValue="~remoteAppUrl/Images/Dice_32.png" />
+        <bt:Image id="WMagick.ShuffleMenu.icon_80x80" DefaultValue="~remoteAppUrl/Images/Dice_80.png" />
       </bt:Images>
       <bt:Urls>
         <bt:Url id="WMagick.DesktopFunctionFile.Url" DefaultValue="~remoteAppUrl/Functions/FunctionFile.html" />
@@ -339,5 +286,4 @@
       </bt:LongStrings>
     </Resources>
   </VersionOverrides>
-  <!-- Конец интеграции для режима команд надстройки. -->
 </OfficeApp>
