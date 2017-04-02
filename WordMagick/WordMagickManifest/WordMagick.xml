@@ -235,9 +235,7 @@
       </bt:Urls>
       <bt:ShortStrings>
         <bt:String id="WMagick.GroupLabel" DefaultValue="Word Magick" />
-        <bt:String id="WMagick.GetStarted.Title" DefaultValue="Default title."/>
-        <!--Test-->
-        <bt:String id="WMagick.Test.Label" DefaultValue="Test" />
+        <bt:String id="WMagick.GetStarted.Title" DefaultValue="Word Magick"/>
         <!--Skeleton-->
         <bt:String id="WMagick.Skeleton.Label" DefaultValue="Skeleton" />
         <!--Gaps-->
@@ -248,12 +246,10 @@
         <bt:String id="WMagick.GapsRandom.Label" DefaultValue="random" />
         <!--Shuffle-->
         <bt:String id="WMagick.ShuffleMenu.Label" DefaultValue="Shuffle" />
-        <bt:String id="WMagick.ShuffleAll.Label" DefaultValue="all letters" />
-        <bt:String id="WMagick.ShuffleTail.Label" DefaultValue="tail letters" />
-        <bt:String id="WMagick.ShuffleInner.Label" DefaultValue="inner letters" />
+        <bt:String id="WMagick.ShuffleAll.Label" DefaultValue="all" />
+        <bt:String id="WMagick.ShuffleTail.Label" DefaultValue="tail" />
+        <bt:String id="WMagick.ShuffleInner.Label" DefaultValue="inner" />
 
-        <!--Test-->
-        <bt:String id="WMagick.Test.Title" DefaultValue="Test" />
         <!--Skeleton-->
         <bt:String id="WMagick.Skeleton.Title" DefaultValue="Skeleton" />
         <!--Gaps-->
@@ -267,9 +263,7 @@
         <bt:String id="WMagick.ShuffleInner.Title" DefaultValue="Shuffle inner letters" />
       </bt:ShortStrings>
       <bt:LongStrings>
-        <bt:String id="WMagick.GetStarted.Description" DefaultValue="Eng description."/>
-        <!--Test-->
-        <bt:String id="WMagick.Test.Description" DefaultValue="Click to execute the test function" />
+        <bt:String id="WMagick.GetStarted.Description" DefaultValue="A simple tool which helps you to create exercises for English lessons"/>
         <!--Skeleton-->
         <bt:String id="WMagick.Skeleton.Description" DefaultValue="Click to replace all letters except the first with a '...'" />
         <!--Gaps-->
