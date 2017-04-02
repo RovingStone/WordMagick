@@ -79,6 +79,97 @@
                     <FunctionName>test</FunctionName>
                   </Action>
                 </Control>
+                <!--Skeletons-->
+                <Control xsi:type="Button" id="WMagick.SkeletonButton">
+                  <Label resid="WMagick.Skeleton.Label" />
+                  <Supertip>
+                    <Title resid="WMagick.Skeleton.Title"/>
+                    <Description resid="WMagick.Skeleton.Description"/>
+                  </Supertip>
+                  <Icon>
+                    <bt:Image size="16" resid="WMagick.icon_16x16" />
+                    <bt:Image size="32" resid="WMagick.icon_32x32" />
+                    <bt:Image size="80" resid="WMagick.icon_80x80" />
+                  </Icon>
+                  <Action xsi:type="ExecuteFunction">
+                    <FunctionName>makeSkeleton</FunctionName>
+                  </Action>
+                </Control>
+                <!--Gaps-->
+                <Control xsi:type="Menu" id="WMagick.GapsMenu">
+                  <Label resid="WMagick.GapsMenu.Label" />
+                  <Supertip>
+                    <Title resid="WMagick.GapsMenu.Label" />
+                    <Description resid="WMagick.GapsMenu.Description" />
+                  </Supertip>
+                  <Icon>
+                    <bt:Image size="16" resid="WMagick.GapsMenu.icon_16x16" />
+                    <bt:Image size="32" resid="WMagick.GapsMenu.icon_32x32" />
+                    <bt:Image size="80" resid="WMagick.GapsMenu.icon_80x80" />
+                  </Icon>
+                  <Items>
+                    <Item id ="GapsEven">
+                      <Label resid="WMagick.GapsEven.Label" />
+                      <Supertip>
+                        <Title resid="WMagick.GapsEven.Title" />
+                        <Description resid="WMagick.GapsEven.Description" />
+                      </Supertip>
+                      <Icon>
+                        <bt:Image size="16" resid="WMagick.GapsEven.icon_16x16" />
+                        <bt:Image size="32" resid="WMagick.GapsEven.icon_32x32" />
+                        <bt:Image size="80" resid="WMagick.GapsEven.icon_80x80" />
+                      </Icon>
+                      <Action xsi:type="ExecuteFunction">
+                        <FunctionName>makeEvenGaps</FunctionName>
+                      </Action>
+                    </Item>
+                    <Item id ="GapsVowels">
+                      <Label resid="WMagick.GapsVowels.Label" />
+                      <Supertip>
+                        <Title resid="WMagick.GapsVowels.Title" />
+                        <Description resid="WMagick.GapsVowels.Description" />
+                      </Supertip>
+                      <Icon>
+                        <bt:Image size="16" resid="WMagick.GapsVowels.icon_16x16" />
+                        <bt:Image size="32" resid="WMagick.GapsVowels.icon_32x32" />
+                        <bt:Image size="80" resid="WMagick.GapsVowels.icon_80x80" />
+                      </Icon>
+                      <Action xsi:type="ExecuteFunction">
+                        <FunctionName>makeVowelsGaps</FunctionName>
+                      </Action>
+                    </Item>
+                    <Item id ="GapsConsonants">
+                      <Label resid="WMagick.GapsCons.Label" />
+                      <Supertip>
+                        <Title resid="WMagick.GapsCons.Title" />
+                        <Description resid="WMagick.GapsCons.Description" />
+                      </Supertip>
+                      <Icon>
+                        <bt:Image size="16" resid="WMagick.GapsCons.icon_16x16" />
+                        <bt:Image size="32" resid="WMagick.GapsCons.icon_32x32" />
+                        <bt:Image size="80" resid="WMagick.GapsCons.icon_80x80" />
+                      </Icon>
+                      <Action xsi:type="ExecuteFunction">
+                        <FunctionName>makeConsonantsGaps</FunctionName>
+                      </Action>
+                    </Item>
+                    <Item id ="GapsRandom">
+                      <Label resid="WMagick.GapsRandom.Label" />
+                      <Supertip>
+                        <Title resid="WMagick.GapsRandom.Title" />
+                        <Description resid="WMagick.GapsRandom.Description" />
+                      </Supertip>
+                      <Icon>
+                        <bt:Image size="16" resid="WMagick.GapsRandom.icon_16x16" />
+                        <bt:Image size="32" resid="WMagick.GapsRandom.icon_32x32" />
+                        <bt:Image size="80" resid="WMagick.GapsRandom.icon_80x80" />
+                      </Icon>
+                      <Action xsi:type="ExecuteFunction">
+                        <FunctionName>makeRandomGaps</FunctionName>
+                      </Action>
+                    </Item>
+                  </Items>
+                </Control>
                 <!--Shuffle-->
                 <Control xsi:type="Menu" id="WMagick.ShuffleMenu">
                   <Label resid="WMagick.ShuffleMenu.Label" />
@@ -152,6 +243,28 @@
         <bt:Image id="WMagick.icon_16x16" DefaultValue="~remoteAppUrl/Images/Button16x16.png" />
         <bt:Image id="WMagick.icon_32x32" DefaultValue="~remoteAppUrl/Images/Button32x32.png" />
         <bt:Image id="WMagick.icon_80x80" DefaultValue="~remoteAppUrl/Images/Button80x80.png" />
+
+        <!--Gaps-->
+        <bt:Image id="WMagick.GapsMenu.icon_16x16" DefaultValue="~remoteAppUrl/Images/Button16x16.png" />
+        <bt:Image id="WMagick.GapsMenu.icon_32x32" DefaultValue="~remoteAppUrl/Images/Button32x32.png" />
+        <bt:Image id="WMagick.GapsMenu.icon_80x80" DefaultValue="~remoteAppUrl/Images/Button80x80.png" />
+
+        <bt:Image id="WMagick.GapsEven.icon_16x16" DefaultValue="~remoteAppUrl/Images/Button16x16.png" />
+        <bt:Image id="WMagick.GapsEven.icon_32x32" DefaultValue="~remoteAppUrl/Images/Button32x32.png" />
+        <bt:Image id="WMagick.GapsEven.icon_80x80" DefaultValue="~remoteAppUrl/Images/Button80x80.png" />
+
+        <bt:Image id="WMagick.GapsVowels.icon_16x16" DefaultValue="~remoteAppUrl/Images/Button16x16.png" />
+        <bt:Image id="WMagick.GapsVowels.icon_32x32" DefaultValue="~remoteAppUrl/Images/Button32x32.png" />
+        <bt:Image id="WMagick.GapsVowels.icon_80x80" DefaultValue="~remoteAppUrl/Images/Button80x80.png" />
+
+        <bt:Image id="WMagick.GapsCons.icon_16x16" DefaultValue="~remoteAppUrl/Images/Button16x16.png" />
+        <bt:Image id="WMagick.GapsCons.icon_32x32" DefaultValue="~remoteAppUrl/Images/Button32x32.png" />
+        <bt:Image id="WMagick.GapsCons.icon_80x80" DefaultValue="~remoteAppUrl/Images/Button80x80.png" />
+
+        <bt:Image id="WMagick.GapsRandom.icon_16x16" DefaultValue="~remoteAppUrl/Images/Button16x16.png" />
+        <bt:Image id="WMagick.GapsRandom.icon_32x32" DefaultValue="~remoteAppUrl/Images/Button32x32.png" />
+        <bt:Image id="WMagick.GapsRandom.icon_80x80" DefaultValue="~remoteAppUrl/Images/Button80x80.png" />
+
         <!--Shuffle-->
         <bt:Image id="WMagick.ShuffleMenu.icon_16x16" DefaultValue="~remoteAppUrl/Images/Button16x16.png" />
         <bt:Image id="WMagick.ShuffleMenu.icon_32x32" DefaultValue="~remoteAppUrl/Images/Button32x32.png" />
@@ -178,6 +291,14 @@
         <bt:String id="WMagick.GetStarted.Title" DefaultValue="Default title."/>
         <!--Test-->
         <bt:String id="WMagick.Test.Label" DefaultValue="Test" />
+        <!--Skeleton-->
+        <bt:String id="WMagick.Skeleton.Label" DefaultValue="Skeleton" />
+        <!--Gaps-->
+        <bt:String id="WMagick.GapsMenu.Label" DefaultValue="Gaps" />
+        <bt:String id="WMagick.GapsEven.Label" DefaultValue="even" />
+        <bt:String id="WMagick.GapsVowels.Label" DefaultValue="vowels" />
+        <bt:String id="WMagick.GapsCons.Label" DefaultValue="consonants" />
+        <bt:String id="WMagick.GapsRandom.Label" DefaultValue="random" />
         <!--Shuffle-->
         <bt:String id="WMagick.ShuffleMenu.Label" DefaultValue="Shuffle" />
         <bt:String id="WMagick.ShuffleAll.Label" DefaultValue="all letters" />
@@ -186,6 +307,13 @@
 
         <!--Test-->
         <bt:String id="WMagick.Test.Title" DefaultValue="Test" />
+        <!--Skeleton-->
+        <bt:String id="WMagick.Skeleton.Title" DefaultValue="Skeleton" />
+        <!--Gaps-->
+        <bt:String id="WMagick.GapsEven.Title" DefaultValue="Gaps - even" />
+        <bt:String id="WMagick.GapsVowels.Title" DefaultValue="Gaps - vowels" />
+        <bt:String id="WMagick.GapsCons.Title" DefaultValue="Gaps - consonants" />
+        <bt:String id="WMagick.GapsRandom.Title" DefaultValue="Gaps - random" />
         <!--Shuffle-->
         <bt:String id="WMagick.ShuffleAll.Title" DefaultValue="Shuffle all letters" />
         <bt:String id="WMagick.ShuffleTail.Title" DefaultValue="Shuffle tail letters" />
@@ -194,12 +322,20 @@
       <bt:LongStrings>
         <bt:String id="WMagick.GetStarted.Description" DefaultValue="Eng description."/>
         <!--Test-->
-        <bt:String id="WMagick.Test.Description" DefaultValue="Click to execute test function" />
+        <bt:String id="WMagick.Test.Description" DefaultValue="Click to execute the test function" />
+        <!--Skeleton-->
+        <bt:String id="WMagick.Skeleton.Description" DefaultValue="Click to replace all letters except the first with a '...'" />
+        <!--Gaps-->
+        <bt:String id="WMagick.GapsMenu.Description" DefaultValue="Click to select action for gaps insertion" />
+        <bt:String id="WMagick.GapsEven.Description" DefaultValue="This action inserts gaps instead of even letters" />
+        <bt:String id="WMagick.GapsVowels.Description" DefaultValue="This action inserts gaps instead of vowels. It preservs the first letter" />
+        <bt:String id="WMagick.GapsCons.Description" DefaultValue="This action inserts gaps instead of consonants. It preservs the first letter" />
+        <bt:String id="WMagick.GapsRandom.Description" DefaultValue="This action inserts random gaps. It preservs the first letter" />
         <!--Shuffle-->
-        <bt:String id="WMagick.ShuffleMenu.Description" DefaultValue="Click to shuffle chars in selected words" />
-        <bt:String id="WMagick.ShuffleAll.Description" DefaultValue="This action shuffles all letters in each word." />
-        <bt:String id="WMagick.ShuffleTail.Description" DefaultValue="This action shuffles tail letters (all except first) in each word." />
-        <bt:String id="WMagick.ShuffleInner.Description" DefaultValue="This action shuffles inner letters (all except first and last) in each word." />
+        <bt:String id="WMagick.ShuffleMenu.Description" DefaultValue="Click to select a shuffle action" />
+        <bt:String id="WMagick.ShuffleAll.Description" DefaultValue="This action shuffles all letters in each word" />
+        <bt:String id="WMagick.ShuffleTail.Description" DefaultValue="This action shuffles tail letters (all except the first) in each word" />
+        <bt:String id="WMagick.ShuffleInner.Description" DefaultValue="This action shuffles inner letters (all except the first and the last) in each word" />
       </bt:LongStrings>
     </Resources>
   </VersionOverrides>

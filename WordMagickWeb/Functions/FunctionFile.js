@@ -8,18 +8,6 @@
     }
 })();
 
-function shuffle(a) {
-    let counter = a.length;
-    while (counter > 0) {
-        let i = Math.floor(Math.random() * counter);
-        counter--;
-        let tmp = a[counter];
-        a[counter] = a[i];
-        a[i] = tmp;
-    }
-    return a;
-}
-
 function asyncResultHandler(asyncResult) {
     if (asyncResult.status == Office.AsyncResultStatus.Succeeded) {
         console.info("asyncResult.status == Succeeded");
@@ -75,6 +63,18 @@ function replacer(regex, changer, data) {
     return data.toString().replace(regex, changer);
 }
 
+function shuffle(a) {
+    let counter = a.length;
+    while (counter > 0) {
+        let i = Math.floor(Math.random() * counter);
+        counter--;
+        let tmp = a[counter];
+        a[counter] = a[i];
+        a[i] = tmp;
+    }
+    return a;
+}
+
 function shuffleAll() {
     var shuffler = replacer.bind(null, new RegExp("\\w+", "ig"), function (match) {
         return shuffle(match.split('')).join('');
@@ -94,6 +94,45 @@ function shuffleInner() {
         return shuffle(match.split('')).join('');
     });
     changeSelectedDataAsync(innerShuffler);
+}
+
+function makeSkeleton() {
+    var skeletonizer = replacer.bind(null, new RegExp("\\B\\w+", "ig"), function (match) {
+        return "…";
+    });
+    changeSelectedDataAsync(skeletonizer);
+}
+
+function makeEvenGaps() {
+    var evenGaps = replacer.bind(null, new RegExp("\\B\\w+", "ig"), function (match) {
+        return match.split('').map(function (char, index) {
+            return (index % 2 === 1 ? char : "_ ");
+        }).join('');
+    });
+    changeSelectedDataAsync(evenGaps);
+}
+
+function makeVowelsGaps() {
+    var vowelsGaps = replacer.bind(null, new RegExp("\\B[aeiouy]", "ig"), function (match) {
+        return "_ ";
+    });
+    changeSelectedDataAsync(vowelsGaps);
+}
+
+function makeConsonantsGaps() {
+    var consonantsGaps = replacer.bind(null, new RegExp("\\B[^aeiouy]", "ig"), function (match) {
+        return "_ ";
+    });
+    changeSelectedDataAsync(consonantsGaps);
+}
+
+function makeRandomGaps() {
+    var randomGaps = replacer.bind(null, new RegExp("\\B\\w+", "ig"), function (match) {
+        return match.split('').map(function (char, index) {
+            return (Math.round(Math.random()) === 0 ? char : "_ ");
+        }).join('');
+    });
+    changeSelectedDataAsync(randomGaps);
 }
 
 function test() {
