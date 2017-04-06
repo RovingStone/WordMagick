@@ -67,7 +67,24 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Images\Dice_16.png" />
+    <Content Include="Images\Dice_32.png" />
+    <Content Include="Images\Dice_80.png" />
+    <Content Include="Images\Engineering_16.png" />
+    <Content Include="Images\Engineering_32.png" />
+    <Content Include="Images\Engineering_80.png" />
+    <Content Include="Images\Eraser_16.png" />
+    <Content Include="Images\Eraser_32.png" />
+    <Content Include="Images\Eraser_80.png" />
+    <Content Include="Images\Services_16.png" />
+    <Content Include="Images\Services_32.png" />
+    <Content Include="Images\Services_80.png" />
+    <Content Include="Images\Thriller_16.png" />
+    <Content Include="Images\Thriller_32.png" />
+    <Content Include="Images\Thriller_80.png" />
     <Content Include="packages.config" />
+    <None Include="Properties\PublishProfiles\wordmagick - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\wordmagick - Web Deploy.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
