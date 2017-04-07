@@ -8,17 +8,12 @@
 
   <Id>354eb70e-5ede-469d-9818-76bb0654c203</Id>
   <Version>1.0.0.0</Version>
-  <ProviderName>[Имя поставщика]</ProviderName>
+  <ProviderName>Sergey Matveev</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
   <DisplayName DefaultValue="Word Magick" />
   <Description DefaultValue="Word Magick"/>
   <IconUrl DefaultValue="https://wordmagick.azurewebsites.net/Images/Button32x32.png" />
 
-  <!--<AppDomains>
-    <AppDomain>AppDomain1</AppDomain>
-    <AppDomain>AppDomain2</AppDomain>
-    <AppDomain>AppDomain3</AppDomain>
-  </AppDomains>-->
   <Hosts>
     <Host Name="Document" />
   </Hosts>
