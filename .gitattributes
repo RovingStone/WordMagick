@@ -1,0 +1,9 @@
+## AUTO-DETECT
+* text=auto
+
+## ARCHIVES
+*.zip binary
+*.7z  binary
+
+## GRAPHICS
+*.png binary
