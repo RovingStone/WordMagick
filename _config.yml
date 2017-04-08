@@ -1,1 +1,5 @@
+title: WordMagick
+description: A little helper
 theme: jekyll-theme-leap-day
+show_downloads: false
+exclude: [Gemfile, Gemfile.lock]

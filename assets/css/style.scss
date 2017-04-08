@@ -1,0 +1,24 @@
+---
+---
+@import "{{ site.theme }}";
+
+#banner {
+    background: #7d6c7b;
+    border: 1px solid #af8aaa;
+}
+
+#banner .button {
+    border: 1px solid #af8aaa;
+}
+
+#banner .fork {
+    background-color: #f9d9f5;
+}
+
+#banner ul li a.button {
+    background-color: #f9d9f5;
+}
+
+#banner .downloads span {
+    color: #3a3a3a;
+}
