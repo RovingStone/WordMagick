@@ -12,7 +12,7 @@
   <DefaultLocale>en-US</DefaultLocale>
   <DisplayName DefaultValue="Word Magick" />
   <Description DefaultValue="Word Magick"/>
-  <IconUrl DefaultValue="https://wordmagick.azurewebsites.net/Images/Button32x32.png" />
+  <IconUrl DefaultValue="https://wordmagick.azurewebsites.net/Images/WM_32.png" />
 
   <Hosts>
     <Host Name="Document" />

@@ -82,6 +82,7 @@
     <Content Include="Images\Thriller_16.png" />
     <Content Include="Images\Thriller_32.png" />
     <Content Include="Images\Thriller_80.png" />
+    <Content Include="Images\WM_32.png" />
     <Content Include="packages.config" />
     <None Include="Properties\PublishProfiles\wordmagick - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\wordmagick - Web Deploy.pubxml" />
