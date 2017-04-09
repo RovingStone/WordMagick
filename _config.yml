@@ -1,5 +1,18 @@
-title: WordMagick
+# Site data
+title: Word Magick
 description: A little helper
 theme: jekyll-theme-leap-day
-show_downloads: false
-exclude: [Gemfile, Gemfile.lock]
+show_downloads: true
+github:
+  zip_url: https://github.com/RovingStone/WordMagick/releases/download/v0.1.0/WordMagick.zip
+  7z_url: https://github.com/RovingStone/WordMagick/releases/download/v0.1.0/WordMagick.7z
+
+# Build settings
+markdown: kramdown  # use kramdown as markdown convertor
+kramdown:
+  input: GFM
+
+# Misc
+exclude:
+  - Gemfile
+  - Gemfile.lock
