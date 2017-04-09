@@ -7,7 +7,7 @@
           xsi:type="TaskPaneApp">
 
   <Id>354eb70e-5ede-469d-9818-76bb0654c203</Id>
-  <Version>1.0.0.0</Version>
+  <Version>0.1.0.0</Version>
   <ProviderName>Sergey Matveev</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
   <DisplayName DefaultValue="Word Magick" />
