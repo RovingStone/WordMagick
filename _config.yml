@@ -7,6 +7,9 @@ github:
   zip_url: https://github.com/RovingStone/WordMagick/releases/download/v0.1.0/WordMagick.zip
   7z_url: https://github.com/RovingStone/WordMagick/releases/download/v0.1.0/WordMagick.7z
 
+# Google Analytics
+google_analytics: UA-97056935-1
+
 # Build settings
 markdown: kramdown  # use kramdown as markdown convertor
 kramdown:
